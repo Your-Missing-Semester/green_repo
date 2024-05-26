@@ -20,11 +20,6 @@ export const NavBar = () => {
             About
           </Link>
         </li>
-        <li>
-          <Link to={'/contact'} className={styles.navLink}>
-            Contact Us
-          </Link>
-        </li>
       </ul>
     </nav>
   );
