@@ -6,25 +6,43 @@ export const Footer = () => {
   return (
     <div className="container">
       <footer>
-        <div className={styles.followUs}>
-          <img
-            src={logoPlaceHolder}
-            alt="logo"
-            style={{ width: '50px', height: 'auto' }}
-          />
+        <div>
+          <img src={logoPlaceHolder} alt="logo" />
         </div>
-
         <div className={styles.footerInfoContainer}>
-          <div className={styles.credits}>
-            <Link to="/terms-of-service">
-              Terms of Service |{' '}
-              <Link to="/privacy-policy">Privacy Policy</Link>
+          <div>
+            <Link
+              to="/terms-of-service"
+              className={styles.footerText}
+              id={styles.tos}
+            >
+              Terms of Service |
             </Link>
-            <p>Copyright &copy; 2024 waypoints | All Rights Reserved </p>
+            <span>
+              {' '}
+              <Link
+                to="/privacy-policy"
+                className={styles.footerText}
+                id={styles.pp}
+              >
+                Privacy Policy
+              </Link>
+            </span>
+            <p className={styles.footerText}>
+              Copyright &copy; 2024 WayPoints | All Rights Reserved{' '}
+            </p>
           </div>
-          <div className={styles.inquiries}>
-            <p>Business Inquiries {'  '}help@waypoints.com</p>
-            <Link to="/contact-us">Contact Us</Link>
+          <div>
+            <Link
+              to="/contact-us"
+              className={styles.footerText}
+              id={styles.contact}
+            >
+              Contact Us
+            </Link>
+            <p className={styles.footerText}>
+              Business Inquiries {'  '}help@waypoints.me
+            </p>
           </div>
         </div>
       </footer>
