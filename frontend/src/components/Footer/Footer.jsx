@@ -16,10 +16,10 @@ export const Footer = () => {
               className={styles.footerText}
               id={styles.tos}
             >
-              Terms of Service |
+              Terms of Service
             </Link>
+            <span className={styles.verticalBar}>|</span>
             <span>
-              {' '}
               <Link
                 to="/privacy-policy"
                 className={styles.footerText}
@@ -29,7 +29,7 @@ export const Footer = () => {
               </Link>
             </span>
             <p className={styles.footerText}>
-              Copyright &copy; 2024 WayPoints | All Rights Reserved{' '}
+              Copyright &copy; 2024 WayPoints | All Rights Reserved
             </p>
           </div>
           <div>
@@ -41,7 +41,7 @@ export const Footer = () => {
               Contact Us
             </Link>
             <p className={styles.footerText}>
-              Business Inquiries {'  '}help@waypoints.me
+              Business Inquiries | help@waypoints.me
             </p>
           </div>
         </div>
