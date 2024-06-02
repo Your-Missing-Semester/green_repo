@@ -1,0 +1,121 @@
+body {
+    background-color: #F4EFFA;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+h1 {
+    letter-spacing: 5px;
+    margin-bottom: 5%;
+}
+
+.loginGroup {
+    font-weight: 700;
+    text-align:center;
+    color: #2F184B;
+
+    border-radius: 25px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: auto;
+    max-width: 30%;
+    max-height: 20%;
+    background-color: rgb(253, 250, 255);
+    box-shadow: 0px 0px 6px #2F184B;
+}
+
+label {
+    background-color: rgb(253, 250, 255); 
+    width: auto;
+    display:block;
+    text-align:left;
+    padding-left: 20%;
+    margin-bottom: 1%;
+}
+
+input {
+    width: 60%;
+    height: 80%;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0px 0px 3px #2F184B;
+    border-radius: 4px;
+    margin-bottom: 3%;
+}
+
+.passReset{
+    font-weight: 250;
+    font-size: 12px;
+    margin-top: -5px;
+    text-align: left;
+    padding-left: 20%;
+}
+
+.passReset:hover{
+    text-decoration: underline;
+}
+
+.loginButton{
+    background-color: white;
+    border-color: #2F184B;
+    border-radius: 5px;
+    padding: 5px 9px 5px 9px;
+    margin-right: 1%;
+    margin-bottom: 7%;
+    width: 30%;
+
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    align-items: center;
+}
+.signupButton{
+    background-color: white;
+    border-color: #2F184B;
+    border-radius: 5px;
+    padding: 5px 9px 5px 9px;
+    margin-bottom: 7%;
+    width: 30%;
+
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    align-items: center;
+}
+
+.loginButton:hover{
+    background-color: #2F184B;
+    color: white;
+    text-decoration: none;
+}
+
+.signupButton:hover{
+    background-color: #2F184B;
+    color: white;
+}
+
+.altLoginSubtext {
+    border-bottom: 1.5px solid #2F184B;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 0.1em;
+}
+
+.altLoginSubtext span{
+    background-color: rgb(253, 250, 255);
+    padding: 0px 10px; 
+}
+
+table td{
+    margin: 0;
+}
+
+img {
+    width: 10%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0;
+}
+
