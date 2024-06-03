@@ -5,7 +5,6 @@ import fb_icon from './fb_icon.png';
 import apple_icon from './apple_icon.png';
 import twtx_icon from './twtx_icon.webp';
 
-
 export function SignUp() {
     return (
         <div className="signup-group">
