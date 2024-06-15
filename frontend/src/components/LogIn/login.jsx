@@ -21,7 +21,7 @@ export function LogIn() {
     const [email, setEmail]=useState('')
     var checkEmail= new RegExp("^.+@.+\\..+")
     // checks email for @ and subsequent . 
-    const isEmailValid=checkEmail.test(email)
+    const isEmailValid=email.length===0 || checkEmail.test(email)
 
     return (
         <div className={styles.login_group}>
