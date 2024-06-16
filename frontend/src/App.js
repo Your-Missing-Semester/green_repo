@@ -1,13 +1,13 @@
 import './App.css';
-import { Footer } from './components/Footer/Footer';
-import { BrowserRouter } from 'react-router-dom';
-import { NavBar } from './components/NavBar/NavBar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage/LandingPage';
 
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
     </BrowserRouter>
   );
 }

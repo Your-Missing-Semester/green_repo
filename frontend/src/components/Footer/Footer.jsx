@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 import logoPlaceHolder from '../../assets/logoPlaceHolder.png';
 
-export const Footer = () => {
+export default function Footer() {
   return (
     <div className="container">
       <footer>
@@ -48,4 +48,4 @@ export const Footer = () => {
       </footer>
     </div>
   );
-};
+}
