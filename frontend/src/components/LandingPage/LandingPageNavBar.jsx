@@ -6,7 +6,7 @@ export default function LandingPageNavBar() {
     <nav>
       <ul>
         <li>
-          <Link to={'/sign-in'} className={styles.navLink}>
+          <Link to={'/sign-in'} className={styles['nav-link']}>
             Sign In
           </Link>
         </li>

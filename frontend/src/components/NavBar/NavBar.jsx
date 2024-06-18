@@ -16,7 +16,7 @@ export const NavBar = () => {
           </Link>
         </li>
         <li>
-          <Link to={'/about'} className={styles.navLink}>
+          <Link to={'/about'} className={styles['nav-link']}>
             About
           </Link>
         </li>
