@@ -1,14 +1,20 @@
 const Router = require('express');
-const { body } = require('express-validator');
+const { checkSchema } = require('express-validator');
 const { validateLogin } = require('../handlers/login');
-const { handleInputErrors } = require('../modules/middleware');
+const { handleInputErrors } = require('../modules/middlewares');
 
 const loginRouter = Router();
 
 loginRouter.post(
   '/login',
-  body('username').isString(),
-  body('password').isString(),
+  checkSchema({
+    username: {
+      isString: true,
+    },
+    password: {
+      isString: true,
+    },
+  }),
   handleInputErrors,
   validateLogin
 );
