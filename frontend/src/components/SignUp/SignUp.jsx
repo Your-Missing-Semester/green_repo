@@ -42,7 +42,7 @@ export default function SignUp() {
 
   return (
     <div className="flex h-screen font-sans">
-      <div className="w-7/12 bg-[#F4EFFA] flex justify-center items-center">
+      <div className="w-7/12 flex justify-center items-center">
         <form className="flex flex-col w-9/12" onSubmit={handleLoginFormSubmit}>
           {passwordError && (
             <p className="mb-4 rounded-md p-4 bg-red-200 text-sm">
