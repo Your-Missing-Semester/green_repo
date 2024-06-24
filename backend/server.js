@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
-const { loginRouter } = require('./routes/login');
+const { signInRouter } = require('./routes/signIn');
 
 const app = express();
 
@@ -14,6 +14,6 @@ app.get('/healthcheck', (req, res) => {
   res.json({ message: 'hello' });
 });
 
-app.use('/api', loginRouter);
+app.use('/api', signInRouter);
 
 module.exports = { app };

@@ -1,10 +1,10 @@
 const Router = require('express');
 const { checkSchema } = require('express-validator');
-const { validateLogin } = require('../handlers/login');
+const { validateSignIn } = require('../handlers/signIn');
 const { handleInputErrors } = require('../modules/middlewares');
 
-const loginRouter = Router();
-const loginSchema = {
+const signInRouter = Router();
+const signInSchema = {
   username: {
     isString: true,
   },
@@ -13,11 +13,11 @@ const loginSchema = {
   },
 };
 
-loginRouter.post(
-  '/login',
-  checkSchema(loginSchema),
+signInRouter.post(
+  '/sign-in',
+  checkSchema(signInSchema),
   handleInputErrors,
-  validateLogin
+  validateSignIn
 );
 
-module.exports = { loginRouter };
+module.exports = { signInRouter };
