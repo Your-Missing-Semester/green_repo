@@ -5,6 +5,12 @@ const { handleInputErrors } = require('../modules/middlewares');
 
 const signUpRouter = Router();
 const signUpSchema = {
+  firstName: {
+    isString: true,
+  },
+  lastName: {
+    isString: true,
+  },
   email: {
     isString: true,
   },
