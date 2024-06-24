@@ -44,6 +44,12 @@ export default function SignUp() {
     <div className="flex h-screen font-sans">
       <div className="w-7/12 flex justify-center items-center">
         <form className="flex flex-col w-9/12" onSubmit={handleLoginFormSubmit}>
+          <Link
+            to={'/'}
+            className="mb-10 text-gray-500 hover:text-black text-sm max-w-40	"
+          >
+            {'< Back to WayPoints'}
+          </Link>
           {passwordError && (
             <p className="mb-4 rounded-md p-4 bg-red-200 text-sm">
               {passwordError}
