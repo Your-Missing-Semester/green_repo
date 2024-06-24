@@ -107,8 +107,8 @@ export default function SignUp() {
           <div className="flex justify-center">
             <span>Already have an account?</span>
             <span> </span>
-            <Link to={'/login'} className="text-purple-400">
-              Login
+            <Link to={'/sign-in'} className="text-purple-400">
+              Sign in
             </Link>
           </div>
         </form>
