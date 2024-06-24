@@ -33,7 +33,7 @@ export default function SignUp() {
     setPassword(e.target.value);
   }
 
-  async function handleLoginFormSubmit(e) {
+  async function handleSignUpFormSubmit(e) {
     e.preventDefault();
 
     const error = validatePassword(password);
@@ -43,7 +43,10 @@ export default function SignUp() {
   return (
     <div className="flex h-screen font-sans">
       <div className="w-7/12 flex justify-center items-center">
-        <form className="flex flex-col w-9/12" onSubmit={handleLoginFormSubmit}>
+        <form
+          className="flex flex-col w-9/12"
+          onSubmit={handleSignUpFormSubmit}
+        >
           <Link
             to={'/'}
             className="mb-10 text-gray-500 hover:text-black text-sm max-w-40	"
