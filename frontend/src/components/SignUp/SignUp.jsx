@@ -94,13 +94,13 @@ export default function SignUp() {
             value={password}
             onChange={handlePasswordChange}
           ></input>
-          <p className="mb-4 text-gray-500 text-sm">
+          <p className="mb-8 text-gray-500 text-sm">
             A minimum of 8 characters must be used, with 1 uppercase, 1
             lowercase, 1 number, and 1 special character.
           </p>
           <button
             type="submit"
-            className="mb-4 focus:outline-offset-2 focus:ring-2 focus:ring-transparent focus:ring-offset-gray-200 rounded-lg px-4 py-2 border border-gray-300 bg-purple-300 hover:bg-purple-400 text-black"
+            className="mb-10 focus:outline-offset-2 focus:ring-2 focus:ring-transparent focus:ring-offset-gray-200 rounded-lg px-4 py-2 border border-gray-300 bg-purple-300 hover:bg-purple-400 text-black"
           >
             Create account
           </button>
