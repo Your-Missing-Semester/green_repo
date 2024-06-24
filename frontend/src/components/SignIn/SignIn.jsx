@@ -79,7 +79,7 @@ export default function SignIn() {
             Welcome back to WayPoints!
           </h1>
           <p className="text-white text-lg">
-            Sign in in to your account to access our platform.
+            Sign in to your account to access our platform.
           </p>
         </div>
       </div>
