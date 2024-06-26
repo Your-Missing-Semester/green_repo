@@ -6,7 +6,7 @@ const { handleInputErrors } = require('../modules/middlewares');
 const signInRouter = Router();
 const signInSchema = {
   email: {
-    isString: true,
+    isEmail: true,
   },
   password: {
     isString: true,
