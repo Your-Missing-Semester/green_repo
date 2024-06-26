@@ -6,7 +6,7 @@ const { handleInputErrors } = require('../modules/middlewares');
 const signInRouter = Router();
 const signInSchema = {
   email: {
-    isString: true,
+    isEmail: true,
   },
   password: {
     isString: true,
@@ -14,7 +14,7 @@ const signInSchema = {
 };
 
 signInRouter.post(
-  '/sign-in',
+  '/',
   checkSchema(signInSchema),
   handleInputErrors,
   validateSignIn

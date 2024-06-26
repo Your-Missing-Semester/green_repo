@@ -2,7 +2,7 @@ const prisma = require('./utils/prismaClient');
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
-const { signInRouter } = require('./routes/signIn');
+const { authRouter } = require('./routes/auth');
 
 const app = express();
 
@@ -15,6 +15,6 @@ app.get('/healthcheck', (req, res) => {
   res.json({ message: 'hello' });
 });
 
-app.use('/api', signInRouter);
+app.use('/api/auth', authRouter);
 
 module.exports = { app };
