@@ -14,7 +14,7 @@ const signInSchema = {
 };
 
 signInRouter.post(
-  '/sign-in',
+  '/',
   checkSchema(signInSchema),
   handleInputErrors,
   validateSignIn

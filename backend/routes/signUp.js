@@ -29,7 +29,7 @@ const signUpSchema = {
 };
 
 signUpRouter.post(
-  '/sign-up',
+  '/',
   checkSchema(signUpSchema),
   handleInputErrors,
   handleSignUp
