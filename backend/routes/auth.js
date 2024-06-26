@@ -4,7 +4,7 @@ const { signInRouter } = require('./signIn');
 
 const authRouter = Router();
 
-app.use('/sign-up', signUpRouter);
-app.use('/sign-in', signInRouter);
+authRouter.use('/sign-up', signUpRouter);
+authRouter.use('/sign-in', signInRouter);
 
 module.exports = { authRouter };
