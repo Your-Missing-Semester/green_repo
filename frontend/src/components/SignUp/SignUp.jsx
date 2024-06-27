@@ -8,7 +8,7 @@ export default function SignUp() {
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState(null);
 
-  const validatePassword = (password) => {
+  const getPasswordValidationErrorIfExists = (password) => {
     const regex =
       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
     if (!regex.test(password)) {
@@ -36,7 +36,7 @@ export default function SignUp() {
   async function handleSignUpFormSubmit(e) {
     e.preventDefault();
 
-    const error = validatePassword(password);
+    const error = getPasswordValidationErrorIfExists(password);
     setPasswordError(error);
   }
 
@@ -66,7 +66,7 @@ export default function SignUp() {
             type="text"
             value={firstName}
             onChange={handleFirstNameChange}
-          ></input>
+          />
           <label>
             Last Name<span className="text-red-500">*</span>
           </label>
@@ -75,7 +75,7 @@ export default function SignUp() {
             type="text"
             value={lastName}
             onChange={handleLastNameChange}
-          ></input>
+          />
           <label>
             Email<span className="text-red-500">*</span>
           </label>
@@ -84,7 +84,7 @@ export default function SignUp() {
             type="email"
             value={email}
             onChange={handleEmailChange}
-          ></input>
+          />
           <label>
             Password<span className="text-red-500">*</span>
           </label>
@@ -93,7 +93,7 @@ export default function SignUp() {
             type="password"
             value={password}
             onChange={handlePasswordChange}
-          ></input>
+          />
           <p className="mb-8 text-gray-500 text-sm">
             A minimum of 8 characters must be used, with 1 uppercase, 1
             lowercase, 1 number, and 1 special character.
