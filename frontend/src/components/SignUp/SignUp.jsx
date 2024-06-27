@@ -49,7 +49,7 @@ export default function SignUp() {
         >
           <Link
             to={'/'}
-            className="mb-10 text-gray-500 hover:text-black text-sm max-w-40	"
+            className="mb-10 text-gray-500 hover:text-black text-sm max-w-40"
           >
             {'< Back to WayPoints'}
           </Link>
