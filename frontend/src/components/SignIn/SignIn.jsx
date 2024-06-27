@@ -13,7 +13,7 @@ export default function SignIn() {
     setPassword(e.target.value);
   }
 
-  async function handleLoginFormSubmit(e) {
+  async function handleSignInFormSubmit(e) {
     e.preventDefault();
 
     // TODO (T41) : Make sure to come back here after the sign in function is written in the backend and sends a response and then process the response and throw any errors if necessary.
@@ -27,10 +27,13 @@ export default function SignIn() {
   return (
     <div className="flex h-screen font-sans">
       <div className="w-7/12 flex justify-center items-center">
-        <form className="flex flex-col w-9/12" onSubmit={handleLoginFormSubmit}>
+        <form
+          className="flex flex-col w-9/12"
+          onSubmit={handleSignInFormSubmit}
+        >
           <Link
             to={'/'}
-            className="mb-10 text-gray-500 hover:text-black text-sm max-w-40	"
+            className="mb-10 text-gray-500 hover:text-black text-sm max-w-40"
           >
             {'< Back to WayPoints'}
           </Link>
@@ -42,7 +45,7 @@ export default function SignIn() {
             type="email"
             value={email}
             onChange={handleEmailChange}
-          ></input>
+          />
           <label>
             Password<span className="text-red-500">*</span>
           </label>
@@ -51,12 +54,10 @@ export default function SignIn() {
             type="text"
             value={password}
             onChange={handlePasswordChange}
-          ></input>
-          <div className="flex mb-8">
-            <input type="checkbox"></input>
-            <label className="text-sm">
-              <span> </span>Remember me
-            </label>
+          />
+          <div className="flex mb-8 items-center">
+            <input type="checkbox" />
+            <label className="text-sm ml-2">Remember me</label>
           </div>
           <button
             type="submit"
