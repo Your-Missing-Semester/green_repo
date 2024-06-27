@@ -38,6 +38,13 @@ export default function SignUp() {
 
     const error = getPasswordValidationErrorIfExists(password);
     setPasswordError(error);
+
+    // TODO (T42) : Make sure to come back here after the sign up function is written in the backend and sends a response and then process the response and throw any errors if necessary.
+    const response = await fetch('/api/auth/sign-up', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ firstName, lastName, email, password }),
+    });
   }
 
   return (
