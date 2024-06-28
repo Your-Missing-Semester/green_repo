@@ -1,5 +1,7 @@
 import SignUpForm from '../../components/SignUp/SignUp';
 
-export default function SignUp() {
+const SignUp: React.FC = () => {
   return <SignUpForm />;
-}
+};
+
+export default SignUp;

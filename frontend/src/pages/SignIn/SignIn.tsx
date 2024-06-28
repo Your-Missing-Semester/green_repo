@@ -1,5 +1,7 @@
 import SignInForm from '../../components/SignIn/SignIn';
 
-export default function SignIn() {
+const SignIn: React.FC = () => {
   return <SignInForm />;
-}
+};
+
+export default SignIn;

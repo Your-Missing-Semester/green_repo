@@ -2,7 +2,7 @@ import LandingPageNavBar from '../../components/LandingPage/LandingPageNavBar';
 import LandingPageBody from '../../components/LandingPage/LandingPageBody';
 import Footer from '../../components/Footer/Footer';
 
-export default function LandingPage() {
+const LandingPage: React.FC = () => {
   return (
     <>
       <LandingPageNavBar />
@@ -10,4 +10,6 @@ export default function LandingPage() {
       <Footer />
     </>
   );
-}
+};
+
+export default LandingPage;
