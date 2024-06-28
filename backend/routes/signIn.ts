@@ -1,15 +1,18 @@
-const Router = require('express');
-const { checkSchema } = require('express-validator');
-const { validateSignIn } = require('../handlers/signIn');
-const { handleInputErrors } = require('../modules/middlewares');
+import { Router } from 'express';
+import { checkSchema, Schema } from 'express-validator';
+import { validateSignIn } from '../handlers/signIn';
+import { handleInputErrors } from '../modules/middlewares';
 
-const signInRouter = Router();
-const signInSchema = {
+export const signInRouter = Router();
+
+const signInSchema: Schema = {
   email: {
     isEmail: true,
+    errorMessage: 'Invalid email format',
   },
   password: {
     isString: true,
+    errorMessage: 'Password must be a string',
   },
 };
 
@@ -19,5 +22,3 @@ signInRouter.post(
   handleInputErrors,
   validateSignIn
 );
-
-module.exports = { signInRouter };

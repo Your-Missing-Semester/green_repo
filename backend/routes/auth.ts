@@ -1,10 +1,8 @@
-const Router = require('express');
-const { signUpRouter } = require('./signUp');
-const { signInRouter } = require('./signIn');
+import { Router } from 'express';
+import { signUpRouter } from './signUp';
+import { signInRouter } from './signIn';
 
-const authRouter = Router();
+export const authRouter = Router();
 
 authRouter.use('/sign-up', signUpRouter);
 authRouter.use('/sign-in', signInRouter);
-
-module.exports = { authRouter };
