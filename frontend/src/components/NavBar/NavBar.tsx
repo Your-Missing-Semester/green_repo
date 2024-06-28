@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import logoPlaceHolder from '../../assets/logoPlaceHolder.png';
 import styles from './NavBar.module.css';
 
-export const NavBar = () => {
+const NavBar: React.FC = () => {
   return (
     <nav>
       <ul>
@@ -24,3 +24,5 @@ export const NavBar = () => {
     </nav>
   );
 };
+
+export default NavBar;
