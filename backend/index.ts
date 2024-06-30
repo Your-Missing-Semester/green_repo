@@ -1,6 +1,6 @@
-import { app } from './server';
+import { app } from './server.ts';
 
-const PORT: number = 8080;
+const PORT = 8080;
 
 app.listen(PORT, () => {
   console.log(`Listening on http://localhost:${PORT}`);

@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { checkSchema, Schema } from 'express-validator';
-import { validateSignIn } from '../handlers/signIn';
-import { handleInputErrors } from '../modules/middlewares';
+import { validateSignIn } from '../handlers/signIn.ts';
+import { handleInputErrors } from '../modules/middlewares.ts';
 
 export const signInRouter = Router();
 
