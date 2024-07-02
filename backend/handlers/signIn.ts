@@ -1,4 +1,6 @@
-const validateSignIn = async (req, res) => {
+import { Request, Response } from 'express';
+
+export const validateSignIn = async (req: Request, res: Response) => {
   /*
   Once we establish our database:
     1. query the database for the user based on their username/email
@@ -7,5 +9,3 @@ const validateSignIn = async (req, res) => {
   */
   res.status(200).json({ message: 'success message for testing api route' });
 };
-
-module.exports = { validateSignIn };
