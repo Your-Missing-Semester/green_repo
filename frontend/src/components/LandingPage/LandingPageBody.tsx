@@ -1,5 +1,7 @@
 import styles from './LandingPageBody.module.css';
 
-export default function LandingPageBody() {
+const LandingPageBody: React.FC = () => {
   return <div className={styles['temp-text']}>Temp Landing Page</div>;
-}
+};
+
+export default LandingPageBody;

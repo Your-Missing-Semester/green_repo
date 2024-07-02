@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function SignUp() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [passwordError, setPasswordError] = useState(null);
+const SignUp: React.FC = () => {
+  const [firstName, setFirstName] = useState<string>('');
+  const [lastName, setLastName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [passwordError, setPasswordError] = useState<string | null>(null);
 
-  const getPasswordValidationErrorIfExists = (password) => {
+  const getPasswordValidationErrorIfExists = (
+    password: string
+  ): string | null => {
     const regex =
       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
     if (!regex.test(password)) {
@@ -17,23 +19,25 @@ export default function SignUp() {
     return null;
   };
 
-  function handleFirstNameChange(e) {
+  const handleFirstNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setFirstName(e.target.value);
-  }
+  };
 
-  function handleLastNameChange(e) {
+  const handleLastNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setLastName(e.target.value);
-  }
+  };
 
-  function handleEmailChange(e) {
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setEmail(e.target.value);
-  }
+  };
 
-  function handlePasswordChange(e) {
+  const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setPassword(e.target.value);
-  }
+  };
 
-  async function handleSignUpFormSubmit(e) {
+  const handleSignUpFormSubmit = async (
+    e: FormEvent<HTMLFormElement>
+  ): Promise<void> => {
     e.preventDefault();
 
     const error = getPasswordValidationErrorIfExists(password);
@@ -45,7 +49,7 @@ export default function SignUp() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ firstName, lastName, email, password }),
     });
-  }
+  };
 
   return (
     <div className="flex h-screen font-sans">
@@ -133,4 +137,6 @@ export default function SignUp() {
       </div>
     </div>
   );
-}
+};
+
+export default SignUp;

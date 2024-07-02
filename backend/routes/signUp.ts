@@ -1,10 +1,11 @@
-const Router = require('express');
-const { checkSchema } = require('express-validator');
-const { handleSignUp } = require('../handlers/signUp');
-const { handleInputErrors } = require('../modules/middlewares');
+import { Router } from 'express';
+import { checkSchema, Schema } from 'express-validator';
+import { handleSignUp } from '../handlers/signUp';
+import { handleInputErrors } from '../modules/middlewares';
 
-const signUpRouter = Router();
-const signUpSchema = {
+export const signUpRouter = Router();
+
+const signUpSchema: Schema = {
   firstName: {
     isString: true,
     errorMessage: 'First name must be a string',
@@ -34,5 +35,3 @@ signUpRouter.post(
   handleInputErrors,
   handleSignUp
 );
-
-module.exports = { signUpRouter };

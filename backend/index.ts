@@ -1,4 +1,5 @@
-const { app } = require('./server');
+import { app } from './server';
+
 const PORT = 8080;
 
 app.listen(PORT, () => {

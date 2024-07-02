@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './LandingPageNavBar.module.css';
 
-export default function LandingPageNavBar() {
+const LandingPageNavBar: React.FC = () => {
   return (
     <nav>
       <ul>
@@ -13,4 +13,6 @@ export default function LandingPageNavBar() {
       </ul>
     </nav>
   );
-}
+};
+
+export default LandingPageNavBar;
