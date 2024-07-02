@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import logoPlaceHolder from '../../assets/logoPlaceHolder.png';
 
-export const NavBar = () => {
+const NavBar: React.FC = () => {
   return (
     <nav className="bg-[#9b72cf]">
       <ul className="flex justify-between items-center list-none m-0 overflow-hidden flex-wrap font-poppins font-normal p-8">
@@ -17,3 +17,5 @@ export const NavBar = () => {
     </nav>
   );
 };
+
+export default NavBar;

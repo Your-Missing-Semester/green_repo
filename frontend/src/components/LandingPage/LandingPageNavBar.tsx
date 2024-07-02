@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function LandingPageNavBar() {
+const LandingPageNavBar: React.FC = () => {
   return (
     <nav className="bg-[#9b72cf]">
       <ul className="flex justify-end items-center list-none m-0 overflow-hidden flex-wrap font-poppins font-normal p-8">
@@ -16,4 +16,6 @@ export default function LandingPageNavBar() {
       </ul>
     </nav>
   );
-}
+};
+
+export default LandingPageNavBar;
